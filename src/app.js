@@ -9,7 +9,7 @@ const errorHandler = require('./error-handler')
 const bookmarksRouter = require('./bookmarks/bookmarks-router')
 
 const app = express()
-console.log(process.env.API_TOKEN)
+
 app.use(morgan((NODE_ENV === 'production') ? 'tiny' : 'common', {
     skip: () => NODE_ENV === 'test'
 }))
